@@ -2,212 +2,1908 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Mr. Tool Bhopal - Mobile repairing tools, soldering stations, microscopes, stencils, screwdrivers and repairing accessories.">
 
     <title>Mr. Tool Bhopal | Mobile Repairing Tools</title>
 
     <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f6f7f9;
+            color: #151515;
+            line-height: 1.6;
         }
 
-        header {
-            background: #111;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 30px;
-        }
-
-        header p {
-            margin: 8px 0 0;
-            color: #ccc;
-        }
-
-        nav {
-            margin-top: 15px;
-        }
-
-        nav a {
-            color: white;
+        a {
             text-decoration: none;
-            margin: 0 10px;
+            color: inherit;
         }
 
-        .hero {
-            background: white;
-            text-align: center;
-            padding: 70px 20px;
+        img {
+            max-width: 100%;
+            display: block;
         }
 
-        .hero h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #666;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 13px 25px;
-            background: #111;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
-
-        .products-section {
-            padding: 50px 20px;
-            max-width: 1100px;
+        .container {
+            width: 92%;
+            max-width: 1200px;
             margin: auto;
         }
 
-        .products-section h2 {
-            text-align: center;
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            background: #111111;
+            color: #ffffff;
+            font-size: 13px;
+            padding: 8px 0;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .top-bar span {
+            color: #dddddd;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 75px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+
+            background: #ff6b00;
+            color: white;
+
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo-text h1 {
+            font-size: 21px;
+            line-height: 1.1;
+        }
+
+        .logo-text p {
+            font-size: 11px;
+            color: #777777;
+            margin-top: 3px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333333;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #ff6b00;
+        }
+
+        .nav-whatsapp {
+            background: #25D366;
+            color: white !important;
+
+            padding: 10px 16px;
+            border-radius: 7px;
+        }
+
+        .nav-whatsapp:hover {
+            color: white !important;
+            opacity: 0.9;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(
+                    120deg,
+                    #111111 0%,
+                    #1c1c1c 55%,
+                    #272727 100%
+                );
+
+            color: white;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+
+            background: rgba(255, 107, 0, 0.15);
+            border: 1px solid rgba(255, 107, 0, 0.4);
+
+            color: #ff8a33;
+
+            padding: 7px 13px;
+            border-radius: 30px;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: clamp(36px, 5vw, 62px);
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h2 span {
+            color: #ff6b00;
+        }
+
+        .hero-text {
+            color: #cfcfcf;
+            font-size: 17px;
+
+            max-width: 600px;
             margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 22px;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #ff6b00;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e85f00;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #555555;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #111111;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.06);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 18px;
+
+            padding: 35px;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .hero-feature:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 8px;
+
+            background: #ff6b00;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 18px;
+        }
+
+        .hero-feature strong {
+            display: block;
+        }
+
+        .hero-feature small {
+            color: #aaaaaa;
+        }
+
+
+        /* =========================
+           CATEGORIES
+        ========================= */
+
+        .section {
+            padding: 70px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading span {
+            color: #ff6b00;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            margin-top: 6px;
+        }
+
+        .section-heading p {
+            color: #777777;
+            margin-top: 8px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns:
+                repeat(6, 1fr);
+
+            gap: 15px;
+        }
+
+        .category {
+            background: white;
+
+            border: 1px solid #eeeeee;
+
+            padding: 20px 10px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .category:hover {
+            border-color: #ff6b00;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .category-icon {
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .category strong {
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           PRODUCT SECTION
+        ========================= */
+
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .products-header h2 {
+            font-size: 32px;
+        }
+
+        .products-header p {
+            color: #777777;
+        }
+
+        .search-box {
+            width: 300px;
+
+            background: white;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 8px;
+
+            padding: 12px 15px;
+
+            outline: none;
+
+            font-size: 14px;
+        }
+
+        .search-box:focus {
+            border-color: #ff6b00;
         }
 
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 20px;
         }
 
         .product {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 13px;
+
+            overflow: hidden;
+
+            transition: 0.25s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.09);
+        }
+
+        .product-image {
+            height: 190px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eeeeee,
+                    #dcdcdc
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 55px;
+        }
+
+        .product-body {
+            padding: 18px;
+        }
+
+        .product-category {
+            color: #ff6b00;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
         }
 
         .product h3 {
-            margin-bottom: 10px;
+            font-size: 17px;
+            margin: 6px 0;
+        }
+
+        .product-description {
+            font-size: 12px;
+            color: #777777;
+            min-height: 38px;
+        }
+
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 15px;
         }
 
         .price {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
         }
 
         .stock {
-            color: green;
-            margin: 10px 0;
+            color: #159447;
+            font-size: 11px;
+            font-weight: bold;
         }
 
-        .whatsapp {
-            display: inline-block;
+        .whatsapp-btn {
+            display: block;
+
             background: #25D366;
             color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
+
+            text-align: center;
+
+            padding: 10px;
+
+            border-radius: 7px;
+
+            margin-top: 15px;
+
+            font-size: 13px;
+            font-weight: bold;
         }
+
+        .whatsapp-btn:hover {
+            background: #1db954;
+        }
+
+
+        /* =========================
+           BUSINESS INFO
+        ========================= */
+
+        .business-section {
+            background: #111111;
+            color: white;
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .business-card {
+            padding: 30px;
+
+            border: 1px solid #292929;
+
+            border-radius: 12px;
+
+            background: #181818;
+        }
+
+        .business-card-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .business-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .business-card p {
+            color: #aaaaaa;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            color: #666666;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-list li {
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: #ff6b00;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .about-box {
+            background: #111111;
+            color: white;
+
+            border-radius: 18px;
+
+            padding: 45px;
+        }
+
+        .about-box h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .about-box p {
+            color: #bbbbbb;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #f0f1f3;
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 13px;
+
+            border: 1px solid #eeeeee;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            margin-bottom: 14px;
+            color: #555555;
+        }
+
+        .contact-item strong {
+            color: #111111;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            background: #111;
+            background: #080808;
             color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
+
+            padding: 35px 0;
         }
 
-        @media (max-width: 600px) {
-            .hero h2 {
-                font-size: 28px;
-            }
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr;
+
+            gap: 30px;
         }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer p,
+        footer a {
+            color: #999999;
+            font-size: 13px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #222222;
+
+            margin-top: 30px;
+            padding-top: 20px;
+
+            text-align: center;
+
+            color: #777777;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .categories {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .products {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .business-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .top-bar {
+                display: none;
+            }
+
+            .navbar {
+                min-height: 65px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .nav-whatsapp {
+                display: none;
+            }
+
+            .hero {
+                padding: 55px 0;
+            }
+
+            .hero h2 {
+                font-size: 39px;
+            }
+
+            .hero-card {
+                padding: 25px;
+            }
+
+            .categories {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .products-header {
+                display: block;
+            }
+
+            .search-box {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+
+        }
+
     </style>
 </head>
 
+
 <body>
 
-<header>
-    <h1>Mr. Tool Bhopal</h1>
-    <p>Mobile Repairing Tools - Wholesale & Retail</p>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-content">
+
+        <span>
+            📍 MP Nagar, Bhopal, Madhya Pradesh
+        </span>
+
+        <span>
+            🚚 Wholesale Supply Across India
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+
+            <div class="logo-icon">
+                MT
+            </div>
+
+            <div class="logo-text">
+
+                <h1>Mr. Tool Bhopal</h1>
+
+                <p>
+                    Mobile Repairing Tools
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="#">
+                Home
+            </a>
+
+            <a href="#categories">
+                Categories
+            </a>
+
+            <a href="#products">
+                Products
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a
+                class="nav-whatsapp"
+                href="https://wa.me/91XXXXXXXXXX"
+                target="_blank">
+
+                WhatsApp
+
+            </a>
+
+        </nav>
+
+    </div>
+
 </header>
 
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-    <h2>Professional Mobile Repairing Tools</h2>
 
-    <p>
-        Quality tools for mobile repairing technicians
-    </p>
+    <div class="container hero-content">
 
-    <a class="button" href="#products">
-        View Products
-    </a>
-</section>
 
-<section class="products-section" id="products">
+        <div>
 
-    <h2>Featured Products</h2>
+            <span class="hero-badge">
+                🔧 MOBILE REPAIRING TOOLS
+            </span>
 
-    <div class="products">
 
-        <div class="product">
-            <h3>Alfine A9 Pro</h3>
-            <p class="price">₹12,500</p>
-            <p class="stock">● In Stock</p>
+            <h2>
+                Professional Tools
+                <span>For Professionals.</span>
+            </h2>
 
-            <a class="whatsapp"
-               href="https://wa.me/91XXXXXXXXXX">
-                WhatsApp Enquiry
-            </a>
+
+            <p class="hero-text">
+
+                Quality mobile repairing tools, soldering
+                equipment, microscopes, stencils and
+                accessories for technicians across India.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#products"
+                    class="btn btn-primary">
+
+                    Explore Products →
+
+                </a>
+
+
+                <a
+                    href="https://wa.me/91XXXXXXXXXX"
+                    target="_blank"
+                    class="btn btn-outline">
+
+                    WhatsApp Us
+
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="product">
-            <h3>Quick 2008 Pro</h3>
-            <p class="price">₹8,500</p>
-            <p class="stock">● In Stock</p>
 
-            <a class="whatsapp"
-               href="https://wa.me/91XXXXXXXXXX">
-                WhatsApp Enquiry
-            </a>
-        </div>
 
-        <div class="product">
-            <h3>YCS T4 Screwdriver</h3>
-            <p class="price">₹1,200</p>
-            <p class="stock">● In Stock</p>
+        <div class="hero-card">
 
-            <a class="whatsapp"
-               href="https://wa.me/91XXXXXXXXXX">
-                WhatsApp Enquiry
-            </a>
+            <div class="hero-card-title">
+                Why choose Mr. Tool Bhopal?
+            </div>
+
+
+            <div class="hero-feature">
+
+                <div class="feature-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Quality Products
+                    </strong>
+
+                    <small>
+                        Reliable tools for technicians
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-feature">
+
+                <div class="feature-icon">
+                    ₹
+                </div>
+
+                <div>
+
+                    <strong>
+                        Competitive Pricing
+                    </strong>
+
+                    <small>
+                        Wholesale-friendly rates
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-feature">
+
+                <div class="feature-icon">
+                    🚚
+                </div>
+
+                <div>
+
+                    <strong>
+                        Pan India Supply
+                    </strong>
+
+                    <small>
+                        Shipping across India
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-feature">
+
+                <div class="feature-icon">
+                    💬
+                </div>
+
+                <div>
+
+                    <strong>
+                        Easy WhatsApp Enquiry
+                    </strong>
+
+                    <small>
+                        Ask for availability & price
+                    </small>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-<footer id="contact">
-    <h3>Mr. Tool Bhopal</h3>
-    <p>Mobile Repairing Tools</p>
-    <p>Bhopal, Madhya Pradesh</p>
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section
+    class="section"
+    id="categories">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                Shop By Category
+            </span>
+
+            <h2>
+                Find The Right Tool
+            </h2>
+
+            <p>
+                Explore our mobile repairing tool categories.
+            </p>
+
+        </div>
+
+
+        <div class="categories">
+
+
+            <div class="category">
+
+                <div class="category-icon">
+                    🔥
+                </div>
+
+                <strong>
+                    Soldering
+                </strong>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">
+                    ⚙️
+                </div>
+
+                <strong>
+                    SMD Stations
+                </strong>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">
+                    🔬
+                </div>
+
+                <strong>
+                    Microscopes
+                </strong>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">
+                    🧩
+                </div>
+
+                <strong>
+                    Stencils
+                </strong>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">
+                    🪛
+                </div>
+
+                <strong>
+                    Screwdrivers
+                </strong>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">
+                    🛠️
+                </div>
+
+                <strong>
+                    Accessories
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section
+    class="section"
+    id="products">
+
+
+    <div class="container">
+
+
+        <div class="products-header">
+
+            <div>
+
+                <p>
+                    FEATURED PRODUCTS
+                </p>
+
+                <h2>
+                    Popular Tools
+                </h2>
+
+            </div>
+
+
+            <input
+                type="text"
+                id="searchInput"
+                class="search-box"
+                placeholder="🔎 Search products...">
+
+        </div>
+
+
+
+        <div
+            class="products"
+            id="productList">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div
+                class="product"
+                data-name="Alfine A9 Pro"
+                data-category="Soldering">
+
+                <div class="product-image">
+                    🔥
+                </div>
+
+                <div class="product-body">
+
+                    <span class="product-category">
+                        Soldering Station
+                    </span>
+
+                    <h3>
+                        Alfine A9 Pro
+                    </h3>
+
+                    <p class="product-description">
+                        Professional soldering station
+                        for mobile technicians.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹12,500
+                        </span>
+
+                        <span class="stock">
+                            ● In Stock
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        class="whatsapp-btn"
+                        href="https://wa.me/91XXXXXXXXXX"
+                        target="_blank">
+
+                        💬 WhatsApp Enquiry
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <div
+                class="product"
+                data-name="Quick 2008 Pro"
+                data-category="SMD">
+
+                <div class="product-image">
+                    ⚙️
+                </div>
+
+                <div class="product-body">
+
+                    <span class="product-category">
+                        SMD Station
+                    </span>
+
+                    <h3>
+                        Quick 2008 Pro
+                    </h3>
+
+                    <p class="product-description">
+                        Professional hot air rework
+                        station for technicians.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹8,500
+                        </span>
+
+                        <span class="stock">
+                            ● In Stock
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        class="whatsapp-btn"
+                        href="https://wa.me/91XXXXXXXXXX"
+                        target="_blank">
+
+                        💬 WhatsApp Enquiry
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <div
+                class="product"
+                data-name="YCS T4 Screwdriver"
+                data-category="Screwdriver">
+
+                <div class="product-image">
+                    🪛
+                </div>
+
+                <div class="product-body">
+
+                    <span class="product-category">
+                        Screwdriver
+                    </span>
+
+                    <h3>
+                        YCS T4 Screwdriver
+                    </h3>
+
+                    <p class="product-description">
+                        Precision screwdriver for
+                        mobile repairing.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹1,200
+                        </span>
+
+                        <span class="stock">
+                            ● In Stock
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        class="whatsapp-btn"
+                        href="https://wa.me/91XXXXXXXXXX"
+                        target="_blank">
+
+                        💬 WhatsApp Enquiry
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 4 -->
+
+            <div
+                class="product"
+                data-name="Goodwick Desoldering Wick"
+                data-category="Accessories">
+
+                <div class="product-image">
+                    🧰
+                </div>
+
+                <div class="product-body">
+
+                    <span class="product-category">
+                        Consumable
+                    </span>
+
+                    <h3>
+                        Goodwick Desoldering Wick
+                    </h3>
+
+                    <p class="product-description">
+                        High-quality desoldering wick
+                        for PCB work.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Contact
+                        </span>
+
+                        <span class="stock">
+                            ● In Stock
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        class="whatsapp-btn"
+                        href="https://wa.me/91XXXXXXXXXX"
+                        target="_blank">
+
+                        💬 WhatsApp Enquiry
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BUSINESS FEATURES
+========================= -->
+
+<section class="section business-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                Mr. Tool Bhopal
+            </span>
+
+            <h2 style="color:white;">
+                Built For Technicians
+            </h2>
+
+            <p style="color:#999;">
+                Everything you need for mobile repairing.
+            </p>
+
+        </div>
+
+
+        <div class="business-grid">
+
+
+            <div class="business-card">
+
+                <div class="business-card-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Professional Tools
+                </h3>
+
+                <p>
+                    Soldering stations, hot air stations,
+                    screwdrivers, microscopes and more.
+                </p>
+
+            </div>
+
+
+            <div class="business-card">
+
+                <div class="business-card-icon">
+                    📦
+                </div>
+
+                <h3>
+                    Wholesale Supply
+                </h3>
+
+                <p>
+                    Tools and accessories available
+                    for technicians and businesses.
+                </p>
+
+            </div>
+
+
+            <div class="business-card">
+
+                <div class="business-card-icon">
+                    🚚
+                </div>
+
+                <h3>
+                    Pan India Delivery
+                </h3>
+
+                <p>
+                    We supply mobile repairing tools
+                    across India.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    class="section"
+    id="about">
+
+    <div class="container about-grid">
+
+
+        <div class="about">
+
+            <span style="color:#ff6b00;font-weight:bold;">
+                ABOUT US
+            </span>
+
+            <h2>
+                Your Mobile Repairing
+                Tool Partner
+            </h2>
+
+            <p>
+                Mr. Tool Bhopal is focused on supplying
+                quality mobile repairing tools and
+                accessories to technicians.
+            </p>
+
+            <p>
+                From soldering stations and microscopes
+                to stencils, screwdrivers and consumables,
+                we aim to make professional tools easily
+                available.
+            </p>
+
+
+            <ul class="about-list">
+
+                <li>
+                    Quality repairing tools
+                </li>
+
+                <li>
+                    Competitive prices
+                </li>
+
+                <li>
+                    Wholesale support
+                </li>
+
+                <li>
+                    Pan India supply
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <h3>
+                Need a Tool?
+            </h3>
+
+            <p>
+                Send us the product name on WhatsApp.
+                We'll help you with availability and
+                current pricing.
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="https://wa.me/91XXXXXXXXXX"
+                target="_blank"
+                class="btn btn-primary">
+
+                Chat on WhatsApp →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    class="section contact"
+    id="contact">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                CONTACT
+            </span>
+
+            <h2>
+                Get In Touch
+            </h2>
+
+            <p>
+                Have a product enquiry? Contact us.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <h3>
+                    📍 Store
+                </h3>
+
+                <div class="contact-item">
+
+                    <strong>
+                        Location:
+                    </strong>
+
+                    MP Nagar, Bhopal,
+                    Madhya Pradesh
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        Business:
+                    </strong>
+
+                    Mobile Repairing Tools
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        Supply:
+                    </strong>
+
+                    Pan India
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    💬 WhatsApp
+                </h3>
+
+                <p style="color:#666;margin-bottom:18px;">
+
+                    For current price, stock and
+                    product enquiry, contact us directly.
+
+                </p>
+
+
+                <a
+                    href="https://wa.me/91XXXXXXXXXX"
+                    target="_blank"
+                    class="btn btn-primary">
+
+                    WhatsApp Us
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div>
+
+            <h3>
+                Mr. Tool Bhopal
+            </h3>
+
+            <p>
+                Mobile repairing tools,
+                equipment and accessories.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                <a href="#">
+                    Home
+                </a>
+            </p>
+
+            <p>
+                <a href="#categories">
+                    Categories
+                </a>
+            </p>
+
+            <p>
+                <a href="#products">
+                    Products
+                </a>
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Bhopal, Madhya Pradesh
+            </p>
+
+            <p>
+                Pan India Supply
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="container copyright">
+
+        © 2026 Mr. Tool Bhopal.
+        All Rights Reserved.
+
+    </div>
+
 </footer>
+
+
+
+<!-- =========================
+     SEARCH JAVASCRIPT
+========================= -->
+
+<script>
+
+    const searchInput =
+        document.getElementById("searchInput");
+
+    const products =
+        document.querySelectorAll(".product");
+
+
+    searchInput.addEventListener(
+        "input",
+        function () {
+
+            const search =
+                this.value.toLowerCase().trim();
+
+
+            products.forEach(
+                function(product) {
+
+                    const name =
+                        product.dataset.name
+                        .toLowerCase();
+
+                    const category =
+                        product.dataset.category
+                        .toLowerCase();
+
+
+                    if (
+                        name.includes(search) ||
+                        category.includes(search)
+                    ) {
+
+                        product.style.display =
+                            "block";
+
+                    } else {
+
+                        product.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
 
 </body>
 </html>
